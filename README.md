@@ -34,56 +34,49 @@ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a
 #### Step 3: Clone the repository
 
 ### Git Workflow
-We are using Git to share and colloborate on the same project at the same time. If you haven't used git before you may wan't to watch a tutorial on youtube to familiarize youself with the tool but below is a explanation of how we will be using git.
+We are using Git to share and colloborate on the same project at the same time. If you haven't used git before you may wan't to watch a tutorial on youtube to familiarize youself with the tool but below is a explanation of how we will be using git with VSCode.
 
 
 
-#### Create and Checkout a New Branch
+#### Step 1: Create and Checkout a New Branch
 
 Choose a descriptive name for your branch based on the feature or bugfix you are working on. For example, if you are working on a login feature, you could name your branch feature-login.
-
-**Using VSCode's Source Control:**
 
 1. Open the Source Control tab on the left sidebar
 2. Click on the "..." menu at the top of the tab
 3. Select "Create Branch" from the menu
 4. Enter your chosen branch name and press Enter
    
-
-
-#### Make Changes to the Branch and Periodically Sync to GitHub
-
+#### Step 2: Make Changes to the Branch and Periodically Sync to GitHub
 Edit the codebase, commit your changes with meaningful messages, and push your changes to the remote repository.
 
-Using VSCode's Source Control
 1. Open the Source Control tab on the left sidebar
-2. Review your changes and stage them by clicking the "+" icon next to each file
+2. Review your changes and stage them by clicking the "+" icon next to each file (or just press commit and then yes when the pop-up shows)
 3. Enter a commit message and click the checkmark icon to commit
-4. Click the "..." menu at the top of the tab and select "Push" to sync your changes to GitHub
+4. Click the refresh icon where the commit button used to be to "push and pull" from GitHub 
 
 
-Create a Pull Request on GitHub
+#### Step 3: Create a Pull Request on GitHub
+After completing your feature or bugfix, create a pull request on GitHub to merge your changes into the main branch.
 
-Go to the repository's GitHub page
-Click on the "Pull Requests" tab
-Click the "New Pull Request" button
-Choose the base branch (usually "main") and the compare branch (your working branch)
-Review your changes and click "Create Pull Request"
-Add a title and description for the pull request, then click "Create Pull Request" again
+1. Go to the repository's GitHub page
+2. Click on the "Pull Requests" tab
+3. Click the "New Pull Request" button
+4. Choose the base branch (usually "main") and the compare branch (your working branch)
+5. Review your changes and click "Create Pull Request"
+6. Add a title and description for the pull request, then click "Create Pull Request" again
 
-Merge the Branch to the Main Branch
+#### Step 4: Merge the Branch to the Main Branch
 Once your pull request has been reviewed and approved by your teammates, merge your changes into the main branch.
 
-On the pull request page, click "Merge Pull Request"
-Confirm the merge by clicking "Confirm Merge"
-Optionally, delete the merged branch by clicking "Delete Branch"
+1. On the pull request page, click "Merge Pull Request"
+2. Confirm the merge by clicking "Confirm Merge"
+3. Optionally, delete the merged branch by clicking "Delete Branch"
 
 Start Over with a New Branch
 After successfully merging your changes, you can start the process over with a new branch for the next feature or bugfix. Remember to update your local main branch by pulling the latest changes from the remote repository before creating a new branch.
 
-Using VSCode's Source Control:
+1. Switch to the main branch by clicking the current branch name in the lower left corner and selecting "main"
+2. Open the Source Control tab on the left sidebar
+3. Click the "..." menu at the top of the tab and select "Pull" to update your local main branch
 
-Switch to the main branch by clicking the current branch name in the lower left corner and selecting "main"
-Open the Source Control tab on the left sidebar
-Click the "..." menu at the top of the tab and select "Pull" to update your local main branch
-Using Git CLI:
