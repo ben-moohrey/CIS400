@@ -53,7 +53,7 @@ Edit the codebase, commit your changes with meaningful messages, and push your c
 1. Open the Source Control tab on the left sidebar
 2. Review your changes and stage them by clicking the "+" icon next to each file (or just press commit and then yes when the pop-up shows)
 3. Enter a commit message and click the checkmark icon to commit
-4. Click the refresh icon where the commit button used to be to "push and pull" from GitHub 
+4. Click the button where the commit button used to be to "push and pull" from GitHub 
 
 
 #### Step 3: Create a Pull Request on GitHub
