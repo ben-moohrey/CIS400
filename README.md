@@ -1,42 +1,51 @@
 # CIS400 - Term Project
 
-
 ## Getting started
 
 ### Project Dependencies
-You will need **git**, a **GitHub** account, **python !(3.10)!**, **pipenv** and **vscode\*** to get started with the project
-1. Install python 3.10 (this project uses 3.10)
-1. Install **git**
+You will need **git**, a **GitHub** account, **python 3.10**, **pipenv** and **vscode** to get started with the project. You can skip the steps if you know you have everything installed already.
+
+1. Install python 3.10 (this project uses 3.10 please make sure you have this version installed to your computer)
+2. Install **git**
    1. Windows
-      1. Download the installer from the git website: https://git-scm.com/download/win and follow the directed steps (I used the default)
+      1. Download the installer from https://git-scm.com/download/win and follow the directed steps (I used the default)
       2. Run`git --version` in the command line
    2. Mac should already have git installed
-2. . Install **pipenv**
+3. Install **pipenv**
    1. Mac/Windows
       1. Open a terminal/powershell and run `pip -V` to see if you have pip installed
       2. If pip is installed then run `pip install --user pipenv`
       3. Run` pipenv --version` to check that the installation worked
          1. (if this did not work you may need to run pipenv)
 
+## Setup Git
 
-
-
-## Git
-
-### Git Setup
-
-#### Step 1: Generating an SSH Key Pair and Adding it to the ssh-agent
+### Step 1: Generating an SSH Key Pair and Adding it to the ssh-agent
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
-#### Step 2: Adding the SSH Key to Your GitHub Account
+### Step 2: Adding the SSH Key to Your GitHub Account
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 
-#### Step 3: Clone the repository
+### Step 3: Clone the repository
+In a terminal/powershell navigate to the directory you want your local copy of the code base to be and then enter: `git clone git@github.com:ben-moohrey/CIS400.git`.
 
-### Git Workflow
+## Install dependencies
+1. Open terminal/powershell
+```bash
+pipenv shell
+pipenv install
+```
+or
+```bash
+python -m pipenv shell
+python -m pipenv install
+```
+
+## Git Workflow
 We are using Git to share and colloborate on the same project at the same time. If you haven't used git before you may wan't to watch a tutorial on youtube to familiarize youself with the tool but below is a explanation of how we will be using git with VSCode.
 
 #### Step 1: Create and Checkout a New Branch
+
 Choose a descriptive name for your branch based on the feature or bugfix you are working on. For example, if you are working on a login feature, you could name your branch feature-login.
 
 1. Open the Source Control tab on the left sidebar
@@ -45,6 +54,7 @@ Choose a descriptive name for your branch based on the feature or bugfix you are
 4. Enter your chosen branch name and press Enter
    
 #### Step 2: Make Changes to the Branch and Periodically Sync to GitHub
+
 Edit the codebase, commit your changes with meaningful messages, and push your changes to the remote repository.
 
 1. Open the Source Control tab on the left sidebar
@@ -54,6 +64,7 @@ Edit the codebase, commit your changes with meaningful messages, and push your c
 5. Repeat until you are done with the change
 
 #### Step 3: Create a Pull Request on GitHub
+
 After completing your feature or bugfix, create a pull request on GitHub to merge your changes into the main branch.
 
 1. Go to the repository's GitHub page
@@ -64,6 +75,7 @@ After completing your feature or bugfix, create a pull request on GitHub to merg
 6. Add a title and description for the pull request, then click "Create Pull Request" again
 
 #### Step 4: Merge the Branch to the Main Branch
+
 Once your pull request has been reviewed and approved by your teammates, merge your changes into the main branch.
 
 1. On the pull request page, click "Merge Pull Request"
@@ -71,6 +83,7 @@ Once your pull request has been reviewed and approved by your teammates, merge y
 3. Optionally, delete the merged branch by clicking "Delete Branch"
 
 #### Step 5: Start Over with a New Branch
+
 After successfully merging your changes, you can start the process over with a new branch for the next feature or bugfix. Remember to update your local main branch by pulling the latest changes from the remote repository before creating a new branch.
 
 1. Switch to the main branch by clicking the current branch name in the lower left corner and selecting "main"
