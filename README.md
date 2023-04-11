@@ -36,10 +36,7 @@ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a
 ### Git Workflow
 We are using Git to share and colloborate on the same project at the same time. If you haven't used git before you may wan't to watch a tutorial on youtube to familiarize youself with the tool but below is a explanation of how we will be using git with VSCode.
 
-
-
 #### Step 1: Create and Checkout a New Branch
-
 Choose a descriptive name for your branch based on the feature or bugfix you are working on. For example, if you are working on a login feature, you could name your branch feature-login.
 
 1. Open the Source Control tab on the left sidebar
@@ -54,7 +51,7 @@ Edit the codebase, commit your changes with meaningful messages, and push your c
 2. Review your changes and stage them by clicking the "+" icon next to each file (or just press commit and then yes when the pop-up shows)
 3. Enter a commit message and click the checkmark icon to commit
 4. Click the button where the commit button used to be to "push and pull" from GitHub 
-
+5. Repeat until you are done with the change
 
 #### Step 3: Create a Pull Request on GitHub
 After completing your feature or bugfix, create a pull request on GitHub to merge your changes into the main branch.
@@ -73,7 +70,7 @@ Once your pull request has been reviewed and approved by your teammates, merge y
 2. Confirm the merge by clicking "Confirm Merge"
 3. Optionally, delete the merged branch by clicking "Delete Branch"
 
-Start Over with a New Branch
+#### Step 5: Start Over with a New Branch
 After successfully merging your changes, you can start the process over with a new branch for the next feature or bugfix. Remember to update your local main branch by pulling the latest changes from the remote repository before creating a new branch.
 
 1. Switch to the main branch by clicking the current branch name in the lower left corner and selecting "main"
