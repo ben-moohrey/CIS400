@@ -4,7 +4,7 @@ def main():
     """
     Main function to run complete program
     """
-    print("Hello World")
+    print("Hello Aidan")
 
 
 if __name__ == "__main__":
