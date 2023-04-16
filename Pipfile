@@ -12,4 +12,4 @@ ruff = "*"
 python_version = "3.10"
 
 [scripts]
-lint = "python ruff --format=github --target-version=py37 ."
+lint = "python ruff --format=github --target-version=py10 ."
