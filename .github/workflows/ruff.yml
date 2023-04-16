@@ -20,6 +20,5 @@ jobs:
       
       - name: Lint with Ruff
         run: |
-          pipenv run testscriptfile
           pipenv run lint
           

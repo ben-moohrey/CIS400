@@ -12,5 +12,4 @@ ruff = "*"
 python_version = "3.10"
 
 [scripts]
-testscriptfile = "echo 'what'"
 lint = "ruff --format=github --target-version=py310 ."
