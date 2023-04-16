@@ -12,4 +12,5 @@ ruff = "*"
 python_version = "3.10"
 
 [scripts]
+main  = "python src/main.py"
 lint = "ruff --format=github --target-version=py310 ."
