@@ -19,4 +19,7 @@ jobs:
       - run: pipenv install
       
       - name: Lint with Ruff
-        run: pipenv run lint
+        run: |
+          pipenv run testscriptfile
+          pipenv run lint
+          
