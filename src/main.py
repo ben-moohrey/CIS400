@@ -2,8 +2,6 @@
 
 import sys
 
-
-
 user = ""
 prompt = ""
 
