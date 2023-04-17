@@ -12,17 +12,17 @@ import sys
 import time
 from urllib.error import URLError
 from http.client import BadStatusLine
-import constants
 
-def oauth_login():
+
+def oauth_login(OAUTH_TOKEN, OAUTH_TOKEN_SECRET, CONSUMER_KEY, CONSUMER_SECRET):
     # XXX: Go to http://twitter.com/apps/new to create an app and get values
     # for these credentials that you'll need to provide in place of these
     # empty string values that are defined as placeholders.
     # See https://developer.twitter.com/en/docs/basics/authentication/overview/oauth
     # for more information on Twitter's OAuth implementation.
 
-    auth = twitter.oauth.OAuth(constants.OAUTH_TOKEN, constants.OAUTH_TOKEN_SECRET,
-                               constants.CONSUMER_KEY, constants.CONSUMER_SECRET)
+    auth = twitter.oauth.OAuth(OAUTH_TOKEN, OAUTH_TOKEN_SECRET,
+                            CONSUMER_KEY, CONSUMER_SECRET)
 
     twitter_api = twitter.Twitter(auth=auth)
     return twitter_api
@@ -211,7 +211,8 @@ def harvest_user_timeline(
     kw = {  # Keyword args for the Twitter API call
         'count': 200,
         'trim_user': 'true',
-        'include_rts' : 'true',
+        'include_rts' : 'false',
+        'exclude_replies' : 'true',
         'since_id' : 1
         }
     
@@ -266,3 +267,14 @@ def harvest_user_timeline(
     print('Done fetching tweets', file=sys.stderr)
 
     return results[:max_results]
+
+
+def find_popular_tweets(statuses, retweet_threshold=3):
+
+    # You could also consider using the favorite_count parameter as part of 
+    # this  heuristic, possibly using it to provide an additional boost to 
+    # popular tweets in a ranked formulation
+        
+    return [ status
+                for status in statuses 
+                    if status['retweet_count'] > retweet_threshold ] 

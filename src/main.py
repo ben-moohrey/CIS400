@@ -1,9 +1,9 @@
 """main.py"""
 
 import sys
-
-user = ""
-prompt = ""
+from classes.TermProject import TermProject
+user = None
+prompt = None
 
 def main(args):
     """
@@ -22,13 +22,16 @@ def main(args):
         if i == 2:
             prompt = str(args[i])
             print("Prompt:", prompt)
+
+    if (user is not None and prompt is not None):
+        termProject = TermProject(user)
+        tt = termProject.get_top_tweets()
+        print(tt[0])
+        print()
+        print(tt[len(tt)-1])
+
     
-    
-
-
-    
-
-
 if __name__ == "__main__":
-
     main(sys.argv)
+    
+   
