@@ -22,6 +22,8 @@ def main(args):
         if i == 2:
             prompt = str(args[i])
             print("Prompt:", prompt)
+    
+    
 
 
     
