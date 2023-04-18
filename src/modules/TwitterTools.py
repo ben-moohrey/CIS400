@@ -213,7 +213,8 @@ def harvest_user_timeline(
         'trim_user': 'true',
         'include_rts' : 'false',
         'exclude_replies' : 'true',
-        'since_id' : 1
+        'since_id' : 1,
+        'tweet_mode': 'extended'
         }
     
     if screen_name:
@@ -278,3 +279,15 @@ def find_popular_tweets(statuses, retweet_threshold=3):
     return [ status
                 for status in statuses 
                     if status['retweet_count'] > retweet_threshold ] 
+
+
+def find_popular_tweets2(tweets, weight_likes=0.5, weight_retweets=0.5):
+
+    # Calculate the weighted average of like count and retweet count for each tweet
+    def weightedAvg(t):
+        return weight_likes * t["favorite_count"] + weight_retweets * t["retweet_count"]
+
+    # Sort the tweets by the weighted average score
+    sorted_tweets = sorted(tweets, key=weightedAvg, reverse=True)
+
+    return sorted_tweets

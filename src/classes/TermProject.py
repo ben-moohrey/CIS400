@@ -11,7 +11,7 @@ class TermProject:
     def __init__(self, user):
         self.user = user
         self.twitter_api = tt.oauth_login(
-            constants. OAUTH_TOKEN,
+            constants.OAUTH_TOKEN,
             constants.OAUTH_TOKEN_SECRET,
             constants.CONSUMER_KEY,
             constants.CONSUMER_SECRET,
@@ -25,6 +25,6 @@ class TermProject:
             screen_name=name,
             max_results=2000
         )
-        return tt.find_popular_tweets(tweets)
+        return tt.find_popular_tweets2(tweets)
         
 
