@@ -46,6 +46,12 @@ pipenv install
 python -m pipenv install
 ```
 
+## Add your API keys
+1. Navigate to the `/src` directory inside of the cloned repository
+2. Create a new file called **`constants.py`** inside of the `/src` directory.
+3. Add your API keys to the **`constants.py`** file.
+4. YOUR API KEYS SHOULD ONLY GO IN THIS FILE.
+
 ## Running the project
 **Mac**
 ```bash
