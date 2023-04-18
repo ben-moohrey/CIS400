@@ -26,10 +26,9 @@ def main(args):
     if (user is not None and prompt is not None):
         termProject = TermProject(user)
         tt = termProject.get_top_tweets()
-        print(tt[0])
-        print()
-        print(tt[len(tt)-1])
-
+        for t in tt[0:10]:
+            print(t['full_text'])
+            print()
     
 if __name__ == "__main__":
     main(sys.argv)
