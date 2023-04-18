@@ -23,22 +23,37 @@ You will need **git**, a **GitHub** account, **python 3.10**, **pipenv** and **v
 ### Step 1: Generating an SSH Key Pair and Adding it to the ssh-agent
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
+
 ### Step 2: Adding the SSH Key to Your GitHub Account
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 
 ### Step 3: Clone the repository
 In a terminal/powershell navigate to the directory you want your local copy of the code base to be and then enter: `git clone git@github.com:ben-moohrey/CIS400.git`.
 
+If cloning the repository gives an error then your key was not setup correctly.
+
 ## Install dependencies
-1. Open terminal/powershell
+1. Open terminal/powershell 
+2. `cd` into the cloned directory
+
+**Mac**
 ```bash
-pipenv shell
 pipenv install
 ```
-or
+
+**Windows** (if pipenv is not in your PATH environment variable you may need to use this command)
 ```bash
-python -m pipenv shell
 python -m pipenv install
+```
+
+## Running the project
+**Mac**
+```bash
+pipenv run main
+```
+**Windows** (if pipenv is not in your PATH environment variable you may need to use this command)
+```bash
+python -m pipenv run main
 ```
 
 ## Git Workflow
