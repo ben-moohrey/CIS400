@@ -9,7 +9,13 @@ class GPT:
 
 
         if (system_message is None):
-            self.system_message = "Based on the following tweets and prompt, give me 5 tweets separated by newlines in the same style and voice of the the 10 tweets but with the content of the prompt. Don't return anything else. Only return the 5 tweets. Make sure that the original prompt is not included."
+            self.system_message = """
+            Based on the following tweets and prompt, give me 
+            5 tweets separated by newlines in the same style and 
+            voice of the the 10 tweets but with the content of the prompt. 
+            Don't return anything else. Only return the 5 tweets. 
+            Make sure that the original prompt is not included.
+            """.strip()
         else:
             self.system_message = system_message
 
