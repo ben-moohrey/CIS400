@@ -2,15 +2,18 @@
 
 import sys
 from classes.TermProject import TermProject
-user = None
-prompt = None
+from classes.GPT import GPT
+
 
 def main(args):
     """
     Main function to run complete program
     """
-    global user
-    global prompt
+    user = None
+    prompt = None
+
+
+    gpt = GPT()
     for i in range(1,len(args[1:])+1):
 
         # User
@@ -26,9 +29,10 @@ def main(args):
     if (user is not None and prompt is not None):
         termProject = TermProject(user)
         tt = termProject.get_top_tweets()
-        for t in tt[0:10]:
-            print(t['full_text'])
-            print()
+        generated = gpt.generate_tweets(tt, prompt)
+        for t in generated:
+            print(t)
+        
     
 if __name__ == "__main__":
     main(sys.argv)
