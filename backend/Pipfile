@@ -10,6 +10,8 @@ matplotlib = "*"
 openai = "*"
 flask = "*"
 flask-cors = "*"
+transformers = "*"
+torch = "*"
 
 [dev-packages]
 ruff = "*"

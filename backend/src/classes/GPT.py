@@ -1,6 +1,7 @@
 import openai
 import src.constants as constants
 import functools as ft
+import json
 class GPT:
     def __init__(self, max_tweets = 10, system_message = None, model = "gpt-3.5-turbo"):
         openai.organization = constants.OPENAI_ORG
@@ -15,6 +16,14 @@ class GPT:
             Remove any links or hashtags. DO NOT include the original prompt in your output.
             DO NOT number the tweets in the output. 
             """.strip()
+
+            # self.system_message = """
+            # You are an API that takes in a Prompt and Top_Tweets in JSON format. With these tweets you are to return 5 
+            # new tweets that mimic the style and voice of the Top_Tweets provided but with
+            # the content of the Prompt. You are to return the 5 and only 5 tweets seperated by '\n'
+            # characters and not numbered. Remove any links or hashtags. DO NOT include the original prompt in your output.
+            # DO NOT number the tweets in the output. 
+            # """
         else:
             self.system_message = system_message
 
@@ -29,6 +38,13 @@ class GPT:
             lambda x, y: x + '\n\n' + y,
             tweet_text[:min(self.max_tweets,len(tweet_text))] 
         )))
+
+        request = json.dumps({
+            "Prompt": prompt,
+            "Top_Tweets": tweet_text[:min(self.max_tweets,len(tweet_text))]
+        })
+
+        print(request)
         
         # Send a request to openai to generate the tweets
         reponse = openai.ChatCompletion.create(

@@ -1,6 +1,9 @@
-# CIS400 - Term Project
+# CIS400 - Term Project - GPTweet
+
+
 
 ## Getting started
+
 
 ### Project Dependencies
 You will need **git**, a **GitHub** account, **python 3.10**, **pipenv** and **vscode** to get started with the project. You can skip the steps if you know you have everything installed already.

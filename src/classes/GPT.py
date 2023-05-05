@@ -23,7 +23,7 @@ class GPT:
 
 
     def generate_tweets(self, user_tweets, prompt):
-        tweet_text = list(map(lambda t: t['full_text'], user_tweets))
+        tweet_text = list(map(lambda t: t['full_text'], user_tweets)) 
 
         # Format the request
         text = "Prompt:\n{0}\n\nTweets:\n{1}".format(prompt,str(ft.reduce(
