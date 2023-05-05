@@ -10,10 +10,10 @@ class GPT:
 
         if (system_message is None):
             self.system_message = """
-            Generate five new tweets separated by the string '1x7ab' that mimic the style and voice 
+            Generate 5 new tweets each separated by the string '1x7ab' that mimic the style and voice 
             of the ten tweets provided, but focus on the content of the prompt given below. 
             Remove any links or hashtags. DO NOT include the original prompt in your output.
-            DO NOT number the tweets in the output. Do not return anything else other than the 5 new tweets separated by '1x7ab'. 
+            DO NOT number the tweets in the output. 
             """.strip()
         else:
             self.system_message = system_message
@@ -40,6 +40,7 @@ class GPT:
         )
 
         # Get the tweets from the openai response
+        print(reponse["choices"][0]["message"]["content"])
         generated_tweets = reponse["choices"][0]["message"]["content"].split('1x7ab')
 
         # Remove possible empty strings and return
