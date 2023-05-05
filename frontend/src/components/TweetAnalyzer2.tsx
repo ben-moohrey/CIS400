@@ -27,7 +27,7 @@ function TweetAnalyzer2() {
     <Container>
       <Row className="justify-content-center mt-5">
         <Col xs={12} md={6}>
-          <h1 className="text-center mb-4">Tweet-GPT</h1>
+          <h1 className="text-center mb-4">GPTweet</h1>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="twitterHandle">
               <Form.Label>Twitter Handle</Form.Label>
@@ -55,7 +55,7 @@ function TweetAnalyzer2() {
                   <span className="ml-2">Loading...</span>
                 </>
               ) : (
-                'Analyze'
+                'Generate New Tweets'
               )}
             </Button>
           </Form>
