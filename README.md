@@ -61,7 +61,7 @@ python -m pipenv install
 ### Frontend
 1. Open terminal/powershell 
 2. `cd` into the project directory
-3. `cd` to the backend folder (`cd frontend`)
+3. `cd` to the frontend folder (`cd frontend`)
 4. run `npm install`
 
 ## Add your API keys
