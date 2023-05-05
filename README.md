@@ -1,9 +1,12 @@
-# CIS400 - Term Project
+# CIS400 - Term Project - GPTweet
 
-## Getting started
+
+## Colaborating
 
 ### Project Dependencies
-You will need **git**, a **GitHub** account, **python 3.10**, **pipenv** and **vscode** to get started with the project. You can skip the steps if you know you have everything installed already.
+**If you are just downloading using a zip file then skip the steps for git.**
+
+You will need **git**, a **GitHub** account, **python 3.10**, **pipenv**, **node** and **vscode** to get started with the project. You can skip the steps if you know you have everything installed already.
 
 1. Install python 3.10 (this project uses 3.10 please make sure you have this version installed to your computer)
 2. Install **git**
@@ -17,6 +20,8 @@ You will need **git**, a **GitHub** account, **python 3.10**, **pipenv** and **v
       2. If pip is installed then run `pip install --user pipenv`
       3. Run` pipenv --version` to check that the installation worked
          1. (if this did not work you may need to run pipenv)
+4. Install **node**
+   1. Visit https://nodejs.org/en/download and download the appropriate nodejs version for your system.
 
 ## Setup Git
 
@@ -27,14 +32,21 @@ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generati
 ### Step 2: Adding the SSH Key to Your GitHub Account
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 
-### Step 3: Clone the repository
+### Step 3: Clone the repository / download zip
 In a terminal/powershell navigate to the directory you want your local copy of the code base to be and then enter: `git clone git@github.com:ben-moohrey/CIS400.git`.
 
 If cloning the repository gives an error then your key was not setup correctly.
 
+**If you are just using the zip file then skip all of the steps using git.**
+
+
+
 ## Install dependencies
+
+### Backend
 1. Open terminal/powershell 
-2. `cd` into the cloned directory
+2. `cd` into the project directory
+3. `cd` to the backend folder (`cd backend`)
 
 **Mac**
 ```bash
@@ -46,21 +58,41 @@ pipenv install
 python -m pipenv install
 ```
 
+### Frontend
+1. Open terminal/powershell 
+2. `cd` into the project directory
+3. `cd` to the backend folder (`cd frontend`)
+4. run `npm install`
+
 ## Add your API keys
-1. Navigate to the `/src` directory inside of the cloned repository
+1. Navigate to the `backend/src` directory inside of the cloned repository
 2. Create a new file called **`constants.py`** inside of the `/src` directory.
 3. Add your API keys to the **`constants.py`** file.
 4. YOUR API KEYS SHOULD ONLY GO IN THIS FILE.
 
+
+![constants.py](/images/CONSTANTS.png)
+
 ## Running the project
+
+## Backend
+
 **Mac**
 ```bash
-pipenv run main
+cd backend
+pipenv run app
 ```
 **Windows** (if pipenv is not in your PATH environment variable you may need to use this command)
 ```bash
+cd backend
 python -m pipenv run main
 ```
+## Frontend
+```bash
+cd frontend
+npm run start
+```
+
 
 ## Git Workflow
 We are using Git to share and colloborate on the same project at the same time. If you haven't used git before you may wan't to watch a tutorial on youtube to familiarize youself with the tool but below is a explanation of how we will be using git with VSCode.

@@ -4,11 +4,11 @@ TermProject.py
 Class contains the logic to scrape the followers from a specific user and return 5
 tweets that are in the style
 """
-import modules.TwitterTools as tt
-import constants
+import src.modules.TwitterTools as tt
+import src.constants as constants
 
 class TermProject:
-    def __init__(self, user):
+    def __init__(self, user=None):
         self.user = user
         self.twitter_api = tt.oauth_login(
             constants.OAUTH_TOKEN,
