@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+twitter = "*"
+networkx = "*"
+matplotlib = "*"
+openai = "*"
+flask = "*"
+flask-cors = "*"
+
+[dev-packages]
+ruff = "*"
+
+[requires]
+python_version = "3.10"
+
+[scripts]
+main  = "python src/main.py"
+lint  = "ruff --format=github --target-version=py310 ."
